@@ -14,6 +14,8 @@ namespace Game.Player
         private void LateUpdate()
         {
             mouseRotate = MouseInput.MouseRotate(mouseSpeed, turnXLimiter);
+            mouseRotate.x = Mathf.Clamp(mouseRotate.x, turnXLimiter.x, turnXLimiter.y);
+
             cameraTransform.Rotate(Vector3.left * mouseRotate.x);
             body.Rotate(Vector3.up * mouseRotate.y);
         }
