@@ -16,7 +16,8 @@ namespace Game.Player
             CheckTarget();
 
             if (Input.GetButtonDown("Use")
-                && target != null)
+                && target != null
+                && target.CanUse())
             {
                 target.Action();
             }

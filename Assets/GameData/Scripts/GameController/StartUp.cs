@@ -5,6 +5,6 @@ public class StartUp : MonoBehaviour
 {
     private void Start()
     {
-        CursorController.LockCursor(true);
+        //CursorController.LockCursor(true);
     }
 }

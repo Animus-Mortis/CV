@@ -8,6 +8,8 @@ namespace Game.Player
         [SerializeField] private float runSpeed;
         [SerializeField] private MouseInput mouseInput;
 
+        [HideInInspector] public bool CanMove;
+
         private CharacterController controller;
         private float speed;
 
@@ -18,6 +20,8 @@ namespace Game.Player
 
         private void FixedUpdate()
         {
+            if (!CanMove) return;
+
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
 
