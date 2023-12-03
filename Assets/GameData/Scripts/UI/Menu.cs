@@ -12,6 +12,9 @@ namespace Game.UI
         [SerializeField] private PlayerRotater rotater;
         [SerializeField] private KeyCode openMenuKey;
         [SerializeField] private string CV_URL_English;
+        [SerializeField] private string CV_URL_Russian;
+        [SerializeField] private string URL_Git;
+        [SerializeField] private string URL_Telegram;
 
         private void Start()
         {
@@ -55,7 +58,17 @@ namespace Game.UI
 
         public void OpenResume()
         {
-            Application.OpenURL(CV_URL_English); //English verion
+            Application.OpenURL(CV_URL_English);
+        }
+
+        public void OpenGit()
+        {
+            Application.OpenURL(URL_Git);
+        }
+
+        public void OpenTelegram()
+        {
+            Application.OpenURL(URL_Telegram);
         }
 
         private void ActiveControle(bool active)
