@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -12,15 +13,23 @@ namespace Game.Interactable
         [SerializeField] private VideoPlayer videoPlayer;
         [SerializeField] private string nameFileClip;
 
+        public Action<Video> playedAction;
 
         public void Action()
         {
             PlayVideo();
+            playedAction?.Invoke(this);
         }
 
         public bool CanUse()
         {
             return !videoPlayer.isPlaying;
+        }
+
+        public void StopVideo()
+        {
+            if (videoPlayer.isPlaying)
+                videoPlayer.Stop();
         }
 
         private void PlayVideo()
