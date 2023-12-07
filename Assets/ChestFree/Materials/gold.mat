@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7811459024673021811
+--- !u!114 &-5086380921538145128
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,28 +20,30 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TreasureChest
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ValidKeywords:
-  - _METALLICSPECGLOSSMAP
-  - _NORMALMAP
+  m_Name: gold
+  m_Shader: {fileID: -6465566751694194690, guid: 0533e6175658d0644a45cf90acc3885f,
+    type: 3}
+  m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_741bbae6c57a41ab89a434765d3cf115:
+        m_Texture: {fileID: 2800000, guid: f58561e82824d4e46ab1cb3e5b0d912e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 9c0a29eb86fb0834daf3451b47d80c8a, type: 3}
+        m_Texture: {fileID: 2800000, guid: f58561e82824d4e46ab1cb3e5b0d912e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: b944813499930c24695e29ceefd68e73, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -61,11 +63,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9c0a29eb86fb0834daf3451b47d80c8a, type: 3}
+        m_Texture: {fileID: 2800000, guid: f58561e82824d4e46ab1cb3e5b0d912e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: ea8b654caedb1dc4590df580cf32e339, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -94,6 +96,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - Vector1_bdbc5ba213a548b0b904c0bb7669fea7: 30
+    - Vector1_c7e68b45218949ae8635b2654770c4e6: 0.03
+    - _Alfa: -1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -112,6 +117,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -123,6 +129,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_418858304bee406e878d9e282fd3ff0c: {r: 18.9008, g: 18.9008, b: 18.9008,
+        a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
