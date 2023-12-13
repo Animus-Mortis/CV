@@ -11,6 +11,12 @@ namespace Game.Interactable
         [SerializeField] private float speedDisolved;
 
         private bool isUsed;
+        private Collider chestCollider;
+
+        private void Start()
+        {
+            chestCollider = GetComponent<Collider>();
+        }
 
         public void Action()
         {
@@ -36,6 +42,8 @@ namespace Game.Interactable
                 material.SetFloat("_Alfa", disolveValue);
                 yield return null;
             }
+
+            chestCollider.enabled = false;
         }
     }
 }

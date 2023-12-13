@@ -1,3 +1,4 @@
+using Game.UI;
 using UnityEngine;
 
 namespace Game.Player
@@ -8,10 +9,15 @@ namespace Game.Player
         [SerializeField] private float runSpeed;
         [SerializeField] private MouseInput mouseInput;
 
-        [HideInInspector] public bool CanMove;
+        /*[HideInInspector]*/ public bool CanMove;
 
         private CharacterController controller;
         private float speed;
+
+        public void SetMenu(Menu menu)
+        {
+            menu.Mover = this;
+        }
 
         private void Awake()
         {
@@ -29,7 +35,6 @@ namespace Game.Player
                 speed = runSpeed;
             else
                 speed = walkSpeed;
-
             Vector3 move = transform.right * x + transform.forward * z;
             controller.Move(move * speed * Time.deltaTime);
         }

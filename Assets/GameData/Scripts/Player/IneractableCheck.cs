@@ -7,8 +7,8 @@ namespace Game.Player
     {
         [SerializeField] private LayerMask InetactableLayer;
         [SerializeField] private float rayLength;
-        [SerializeField] private InteractableImageViewer imageViewer;
 
+        private InteractableImageViewer imageViewer;
         private IInteractable target;
 
         private void Update()
@@ -21,6 +21,11 @@ namespace Game.Player
             {
                 target.Action();
             }
+        }
+
+        public void SetInteractableImage(InteractableImageViewer imageViewer)
+        {
+            this.imageViewer = imageViewer;
         }
 
         private void CheckTarget()
@@ -38,7 +43,7 @@ namespace Game.Player
             else
             {
                 target = null;
-                imageViewer.Activate(false);
+                imageViewer?.Activate(false);
             }
         }
     }

@@ -64,6 +64,20 @@ MonoBehaviour:
         m_Value: ServerData/[BuildTarget]
       - m_Id: 9044d3d46406c4444871fcef3002470f
         m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+    - m_InheritedParent: 
+      m_Id: 51976d578d19016489e88ef683b25b2e
+      m_ProfileName: RemoteProfiler
+      m_Values:
+      - m_Id: d6935698c60de3143a3e05cf4daea0ea
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: fafbb00084f32004187d2f60942d0a11
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 20f4782f899c9934893a79c57f993239
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 6b4a7a99edba77f44842bc6b4fb8c3c9
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 9044d3d46406c4444871fcef3002470f
+        m_Value: https://ssmartproger.ru/RemoteResorses/WebGL
     m_ProfileEntryNames:
     - m_Id: d6935698c60de3143a3e05cf4daea0ea
       m_Name: BuildTarget
@@ -97,7 +111,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ba2e94ba6e6a74541b2072450a7fd02f, type: 2}
   - {fileID: 11400000, guid: 09e1094dc2bdde24785c2488eef2817e, type: 2}
   - {fileID: 11400000, guid: 4da1509ce5442d448ac2bae6f3ffbf68, type: 2}
-  m_ActiveProfileId: 24e4af3e84c24454896efbb7d4604596
+  m_ActiveProfileId: 51976d578d19016489e88ef683b25b2e
   m_HostingServicesManager:
     m_HostingServiceInfos: []
     m_Settings: {fileID: 11400000}

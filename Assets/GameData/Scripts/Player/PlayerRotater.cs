@@ -1,3 +1,4 @@
+using Game.UI;
 using UnityEngine;
 
 namespace Game.Player
@@ -15,6 +16,11 @@ namespace Game.Player
 
         private Vector2 mouseRotate;
         private float xRotate;
+
+        public void SetMenu(Menu menu)
+        {
+            menu.Rotater = this;
+        }
 
         private void LateUpdate()
         {

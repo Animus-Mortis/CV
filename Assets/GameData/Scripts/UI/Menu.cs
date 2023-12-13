@@ -8,18 +8,29 @@ namespace Game.UI
     {
         [SerializeField] private GameObject menuPanel;
         [SerializeField] private GameObject settingPanel;
-        [SerializeField] private PlayerMover mover;
-        [SerializeField] private PlayerRotater rotater;
         [SerializeField] private KeyCode openMenuKey;
         [SerializeField] private string CV_URL_English;
         [SerializeField] private string CV_URL_Russian;
         [SerializeField] private string URL_Git;
         [SerializeField] private string URL_Telegram;
 
+        public PlayerMover Mover
+        {
+            set { mover = value; }
+        }
+        [SerializeField] private PlayerMover mover;
+
+        public PlayerRotater Rotater
+        {
+            set { rotater = value; }
+        }
+        [SerializeField] private PlayerRotater rotater;
+
         private void Start()
         {
             StartCoroutine(CheckOpenMenu());
         }
+
 
         private IEnumerator CheckOpenMenu()
         {
