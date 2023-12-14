@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Setting Data
   m_EditorClassIdentifier: 
   mouseSensitiveMultiplier: 1
+  speedClipboardMultiplier: 1

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3887518696299401305}
   - component: {fileID: 1588954564946420403}
   - component: {fileID: 1635927019}
+  - component: {fileID: 1033931577479142330}
   m_Layer: 0
   m_Name: TorchLowPoly
   m_TagString: Untagged
@@ -119,6 +120,18 @@ MonoBehaviour:
   phase: 1
   delay: 0.1
   basic: 1
+--- !u!114 &1033931577479142330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3383260880424808844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa03209574935d547b1bcd6fce2840dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5826789917179999135
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,13 +177,13 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8679245, g: 0.5724985, b: 0.33161268, a: 1}
-  m_Intensity: 1
-  m_Range: 20
+  m_Intensity: 3
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1

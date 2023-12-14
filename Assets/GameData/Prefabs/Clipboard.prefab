@@ -221,6 +221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8aa092e5d789a429d9fa5461aa12f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPlayer: {fileID: 0}
+  canUse: 1
 --- !u!65 &8460215791797129928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -245,6 +247,7 @@ GameObject:
   - component: {fileID: 8460397527400575213}
   - component: {fileID: 8434888840594988863}
   - component: {fileID: 8442853409557181463}
+  - component: {fileID: 5421246676563999026}
   m_Layer: 0
   m_Name: PAGE
   m_TagString: Untagged
@@ -317,6 +320,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5421246676563999026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8465829217734659255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa03209574935d547b1bcd6fce2840dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8466557338239870827
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +343,7 @@ GameObject:
   - component: {fileID: 8460302912546775141}
   - component: {fileID: 8434140748782741541}
   - component: {fileID: 8443434713952022531}
+  - component: {fileID: 8242936185814778013}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -401,3 +417,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8242936185814778013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8466557338239870827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa03209574935d547b1bcd6fce2840dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

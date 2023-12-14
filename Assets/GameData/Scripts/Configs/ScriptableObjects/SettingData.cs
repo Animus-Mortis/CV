@@ -4,4 +4,5 @@ using UnityEngine;
 public class SettingData : ScriptableObject
 {
     public float mouseSensitiveMultiplier;
+    public float speedClipboardMultiplier;
 }

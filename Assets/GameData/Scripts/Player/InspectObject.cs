@@ -9,12 +9,11 @@ namespace Game.Player
         [SerializeField] private Transform pointInspect;
         [SerializeField] private PlayerRotater playerRotater;
         [SerializeField] private PlayerMover playerMover;
-        [SerializeField] private Vector3 rotate;
         [SerializeField] private float speed;
         [SerializeField] private float speedRotate;
+        [SerializeField] private SettingData settingData;
 
         private Vector3 targetPosition;
-        private Quaternion rotateObject;
         private Quaternion targetRotation;
         private Transform newTarget;
         private Transform mainCamera;
@@ -49,19 +48,16 @@ namespace Game.Player
             targetRotation = target.rotation;
             target.parent = pointInspect;
 
-            Vector3 targetDir = mainCamera.position- newTarget.position + rotate;
-            rotateObject = Quaternion.LookRotation(targetDir);
-
             StartCoroutine(ZoomIn());
         }
 
         private IEnumerator ZoomIn()
         {
             while (Vector3.Distance(newTarget.position, pointInspect.position) > 0.1f
-                || newTarget.rotation != rotateObject)
+                || newTarget.rotation != pointInspect.rotation)
             {
-                newTarget.position = Vector3.Lerp(newTarget.position, pointInspect.position, speed);
-                newTarget.rotation = Quaternion.RotateTowards(newTarget.rotation, rotateObject, speedRotate * Time.deltaTime);
+                newTarget.position = Vector3.Lerp(newTarget.position, pointInspect.position, speed * settingData.speedClipboardMultiplier);
+                newTarget.rotation = Quaternion.RotateTowards(newTarget.rotation, pointInspect.rotation, speedRotate * Time.deltaTime);
                 yield return new WaitForFixedUpdate();
             }
         }
@@ -72,7 +68,7 @@ namespace Game.Player
             while (Vector3.Distance(newTarget.position, targetPosition) > 0.1f
                 || newTarget.rotation != targetRotation)
             {
-                newTarget.position = Vector3.Lerp(newTarget.position, targetPosition, speed);
+                newTarget.position = Vector3.Lerp(newTarget.position, targetPosition, speed * settingData.speedClipboardMultiplier);
                 newTarget.rotation = Quaternion.RotateTowards(newTarget.rotation, targetRotation, speedRotate * Time.deltaTime);
 
                 yield return new WaitForFixedUpdate();
@@ -80,19 +76,20 @@ namespace Game.Player
 
             newTarget.position = targetPosition;
             newTarget.rotation = targetRotation;
+
             if (clipboard != null)
             {
                 clipboard.canUse = true;
                 clipboard = null;
             }
+
             newTarget = null;
             PlayerStatic(true);
         }
 
         private void PlayerStatic(bool active)
         {
-            playerMover.enabled = active;
-            //playerRotater.enabled = active;
+            playerMover.CanMove = active;
         }
     }
 }

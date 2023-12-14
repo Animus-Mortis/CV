@@ -10,5 +10,10 @@ namespace Game.GameController
         {
             settingData.mouseSensitiveMultiplier = value;
         }
+
+        public void SetSpeedClipboard(float value)
+        {
+            settingData.speedClipboardMultiplier = value;
+        }
     }
 }
