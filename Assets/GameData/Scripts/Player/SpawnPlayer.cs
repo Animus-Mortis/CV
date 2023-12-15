@@ -10,6 +10,7 @@ namespace Game.Player
     {
         [SerializeField] private Transform spawnPoint;
         [SerializeField] private string prefName;
+        [SerializeField] private LoadingImage loadingImage;
 
         private GameObject player;
         [Inject] private Menu menu;
@@ -40,6 +41,8 @@ namespace Game.Player
             player.GetComponent<PlayerMover>().SetMenu(menu);
             player.GetComponent<InspectObject>().SetInteractableImage(imageViewer);
             player.GetComponentInChildren<IneractableCheck>().SetInteractableImage(imageViewer);
+
+            loadingImage.ActiveImage(false);
         }
 
         public GameObject GetPlayer()
