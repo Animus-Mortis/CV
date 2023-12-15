@@ -1,3 +1,4 @@
+using Game.GameController;
 using Game.UI;
 using UnityEngine;
 
@@ -6,7 +7,6 @@ namespace Game.Player
     public class PlayerRotater : MonoBehaviour
     {
         [SerializeField] private MouseInput mouseInput;
-        [SerializeField] private SettingData settings;
         [SerializeField] private Transform cameraTransform;
         [SerializeField] private Transform body;
         [SerializeField] private float mouseSpeed;
@@ -16,17 +16,23 @@ namespace Game.Player
 
         private Vector2 mouseRotate;
         private float xRotate;
+        private SettingController setting;
 
         public void SetMenu(Menu menu)
         {
             menu.Rotater = this;
         }
 
+        public void SetSettingController(SettingController controller)
+        {
+            setting = controller;
+        }
+
         private void LateUpdate()
         {
             if (!CanRotate) return;
 
-            mouseRotate = MouseInput.MouseRotate(mouseSpeed* settings.mouseSensitiveMultiplier);
+            mouseRotate = MouseInput.MouseRotate(mouseSpeed* setting.GetMouseSensitiveMultiplier());
 
             xRotate += mouseRotate.x;
             xRotate = Mathf.Clamp(xRotate, turnXLimiter.x, turnXLimiter.y);

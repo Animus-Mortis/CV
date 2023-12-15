@@ -4,16 +4,27 @@ namespace Game.GameController
 {
     public class SettingController : MonoBehaviour
     {
-        [SerializeField] private SettingData settingData;
+        private float mouseSensitiveMultiplier = 1;
+        private float speedClipboardMultiplier = 1;
 
         public void SetMouseSensetive(float value)
         {
-            settingData.mouseSensitiveMultiplier = value;
+            mouseSensitiveMultiplier = value;
         }
 
         public void SetSpeedClipboard(float value)
         {
-            settingData.speedClipboardMultiplier = value;
+            speedClipboardMultiplier = value;
+        }
+
+        public float GetMouseSensitiveMultiplier()
+        {
+            return mouseSensitiveMultiplier;
+        }
+
+        public float GetSpeedClipboardMultiplier()
+        {
+            return speedClipboardMultiplier;
         }
     }
 }

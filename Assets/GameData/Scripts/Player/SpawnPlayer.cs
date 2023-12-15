@@ -1,3 +1,4 @@
+using Game.GameController;
 using Game.UI;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -11,6 +12,7 @@ namespace Game.Player
         [SerializeField] private Transform spawnPoint;
         [SerializeField] private string prefName;
         [SerializeField] private LoadingImage loadingImage;
+        [SerializeField] private SettingController settingController;
 
         private GameObject player;
         [Inject] private Menu menu;
@@ -38,8 +40,10 @@ namespace Game.Player
             player.transform.rotation = spawnPoint.rotation;
 
             player.GetComponent<PlayerRotater>().SetMenu(menu);
+            player.GetComponent<PlayerRotater>().SetSettingController(settingController);
             player.GetComponent<PlayerMover>().SetMenu(menu);
             player.GetComponent<InspectObject>().SetInteractableImage(imageViewer);
+            player.GetComponent<InspectObject>().SetSettingController(settingController);
             player.GetComponentInChildren<IneractableCheck>().SetInteractableImage(imageViewer);
 
             loadingImage.ActiveImage(false);

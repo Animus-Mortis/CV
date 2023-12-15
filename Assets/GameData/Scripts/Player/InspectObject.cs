@@ -1,3 +1,4 @@
+using Game.GameController;
 using Game.Interactable;
 using Game.UI;
 using System.Collections;
@@ -12,13 +13,13 @@ namespace Game.Player
         [SerializeField] private PlayerMover playerMover;
         [SerializeField] private float speed;
         [SerializeField] private float speedRotate;
-        [SerializeField] private SettingData settingData;
 
         private Vector3 targetPosition;
         private Quaternion targetRotation;
         private Transform newTarget;
         private Clipboard clipboard;
         private InteractableImageViewer ImageViewer;
+        private SettingController setting;
 
         private void Update()
         {
@@ -32,6 +33,11 @@ namespace Game.Player
         public void SetInteractableImage(InteractableImageViewer interactableImageViewer)
         {
             ImageViewer = interactableImageViewer;
+        }
+
+        public void SetSettingController(SettingController controller)
+        {
+            setting = controller;
         }
 
         public void Inspect(Transform target)
@@ -57,7 +63,7 @@ namespace Game.Player
             while (Vector3.Distance(newTarget.position, pointInspect.position) > 0.1f
                 || newTarget.rotation != pointInspect.rotation)
             {
-                newTarget.position = Vector3.Lerp(newTarget.position, pointInspect.position, speed * settingData.speedClipboardMultiplier);
+                newTarget.position = Vector3.Lerp(newTarget.position, pointInspect.position, speed * setting.GetSpeedClipboardMultiplier());
                 newTarget.rotation = Quaternion.RotateTowards(newTarget.rotation, pointInspect.rotation, speedRotate * Time.deltaTime);
                 yield return new WaitForFixedUpdate();
             }
@@ -72,7 +78,7 @@ namespace Game.Player
             while (Vector3.Distance(newTarget.position, targetPosition) > 0.1f
                 || newTarget.rotation != targetRotation)
             {
-                newTarget.position = Vector3.Lerp(newTarget.position, targetPosition, speed * settingData.speedClipboardMultiplier);
+                newTarget.position = Vector3.Lerp(newTarget.position, targetPosition, speed * setting.GetSpeedClipboardMultiplier());
                 newTarget.rotation = Quaternion.RotateTowards(newTarget.rotation, targetRotation, speedRotate * Time.deltaTime);
 
                 yield return new WaitForFixedUpdate();
