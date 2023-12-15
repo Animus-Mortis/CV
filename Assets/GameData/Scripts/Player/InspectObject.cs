@@ -1,4 +1,5 @@
 using Game.Interactable;
+using Game.UI;
 using System.Collections;
 using UnityEngine;
 
@@ -16,13 +17,8 @@ namespace Game.Player
         private Vector3 targetPosition;
         private Quaternion targetRotation;
         private Transform newTarget;
-        private Transform mainCamera;
         private Clipboard clipboard;
-
-        private void Awake()
-        {
-            mainCamera = Camera.main.transform;
-        }
+        private InteractableImageViewer ImageViewer;
 
         private void Update()
         {
@@ -31,6 +27,11 @@ namespace Game.Player
             {
                 StartCoroutine(ZoomOut());
             }
+        }
+
+        public void SetInteractableImage(InteractableImageViewer interactableImageViewer)
+        {
+            ImageViewer = interactableImageViewer;
         }
 
         public void Inspect(Transform target)
@@ -60,9 +61,12 @@ namespace Game.Player
                 newTarget.rotation = Quaternion.RotateTowards(newTarget.rotation, pointInspect.rotation, speedRotate * Time.deltaTime);
                 yield return new WaitForFixedUpdate();
             }
+
+            ImageViewer.ActivePutImage(true);
         }
         private IEnumerator ZoomOut()
         {
+            ImageViewer.ActivePutImage(false);
             newTarget.parent = null;
 
             while (Vector3.Distance(newTarget.position, targetPosition) > 0.1f

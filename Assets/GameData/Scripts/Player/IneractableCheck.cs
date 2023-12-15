@@ -36,14 +36,14 @@ namespace Game.Player
             {
                 target = hit.transform.GetComponent<IInteractable>();
                 if (target.CanUse())
-                    imageViewer.Activate(true);
+                    imageViewer.ActivateInteractableImage(true);
                 else
-                    imageViewer.Activate(false);
+                    imageViewer.ActivateInteractableImage(false);
             }
             else
             {
                 target = null;
-                imageViewer?.Activate(false);
+                imageViewer?.ActivateInteractableImage(false);
             }
         }
     }

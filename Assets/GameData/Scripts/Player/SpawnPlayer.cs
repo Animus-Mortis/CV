@@ -38,6 +38,7 @@ namespace Game.Player
 
             player.GetComponent<PlayerRotater>().SetMenu(menu);
             player.GetComponent<PlayerMover>().SetMenu(menu);
+            player.GetComponent<InspectObject>().SetInteractableImage(imageViewer);
             player.GetComponentInChildren<IneractableCheck>().SetInteractableImage(imageViewer);
         }
 
