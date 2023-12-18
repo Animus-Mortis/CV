@@ -4735,6 +4735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 833390650}
+  videoMaterial: {fileID: 2100000, guid: 5fc0197dbbac1df449c5fedf10019d66, type: 2}
   nameFileClip: Archer.mp4
 --- !u!23 &604199568
 MeshRenderer:
@@ -4756,7 +4757,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5fc0197dbbac1df449c5fedf10019d66, type: 2}
+  - {fileID: 2100000, guid: 3464504c092f39546bfe03934569e6be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7636,7 +7637,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 979f0175c5c3a0842bca532750676016, type: 2}
+  - {fileID: 2100000, guid: 3464504c092f39546bfe03934569e6be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7679,6 +7680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1344862245}
+  videoMaterial: {fileID: 2100000, guid: 979f0175c5c3a0842bca532750676016, type: 2}
   nameFileClip: Lich.mp4
 --- !u!65 &933491770
 BoxCollider:
@@ -9926,6 +9928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1535386338}
+  videoMaterial: {fileID: 2100000, guid: 9b41ee8917d70e643b3297b89239408d, type: 2}
   nameFileClip: Candy.mp4
 --- !u!23 &1235216499
 MeshRenderer:
@@ -9947,7 +9950,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9b41ee8917d70e643b3297b89239408d, type: 2}
+  - {fileID: 2100000, guid: 3464504c092f39546bfe03934569e6be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12290,6 +12293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1279269009}
+  videoMaterial: {fileID: 2100000, guid: 3eac0243ed77da443adf210891c05c4e, type: 2}
   nameFileClip: Wyvern.mp4
 --- !u!23 &1540876398
 MeshRenderer:
@@ -12311,7 +12315,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3eac0243ed77da443adf210891c05c4e, type: 2}
+  - {fileID: 2100000, guid: e77a6d816d252084daf490a3a7f4634f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15809,7 +15813,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e6e7dca0f5c31544ba0ea7c7287c8192, type: 2}
+  - {fileID: 2100000, guid: 3464504c092f39546bfe03934569e6be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15865,6 +15869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1060847545}
+  videoMaterial: {fileID: 2100000, guid: e6e7dca0f5c31544ba0ea7c7287c8192, type: 2}
   nameFileClip: Garbage man.mp4
 --- !u!114 &1958392584
 MonoBehaviour:
@@ -16504,6 +16509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 878281304}
+  videoMaterial: {fileID: 2100000, guid: 99ecbf4db16ba7646bdcaab1fa89c366, type: 2}
   nameFileClip: Robot.mp4
 --- !u!23 &2039318275
 MeshRenderer:
@@ -16525,7 +16531,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 99ecbf4db16ba7646bdcaab1fa89c366, type: 2}
+  - {fileID: 2100000, guid: 3464504c092f39546bfe03934569e6be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
