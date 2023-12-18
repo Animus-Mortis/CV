@@ -1,3 +1,4 @@
+using Game.Localization;
 using Game.Player;
 using System.Collections;
 using UnityEngine;
@@ -69,7 +70,15 @@ namespace Game.UI
 
         public void OpenResume()
         {
-            Application.OpenURL(CV_URL_English);
+            switch (Translator.GetLanguageID())
+            {
+                case 0:
+                    Application.OpenURL(CV_URL_English);
+                    break;
+                case 1:
+                    Application.OpenURL(CV_URL_Russian);
+                    break;
+            }
         }
 
         public void OpenGit()

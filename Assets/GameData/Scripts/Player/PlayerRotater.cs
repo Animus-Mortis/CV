@@ -32,7 +32,7 @@ namespace Game.Player
         {
             if (!CanRotate) return;
 
-            mouseRotate = MouseInput.MouseRotate(mouseSpeed* setting.GetMouseSensitiveMultiplier());
+            mouseRotate = MouseInput.MouseRotate(mouseSpeed * setting.GetMouseSensitiveMultiplier() * Time.fixedDeltaTime);
 
             xRotate += mouseRotate.x;
             xRotate = Mathf.Clamp(xRotate, turnXLimiter.x, turnXLimiter.y);

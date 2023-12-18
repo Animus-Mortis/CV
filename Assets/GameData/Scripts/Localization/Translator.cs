@@ -147,6 +147,11 @@ namespace Game.Localization
             UpdateTexts();
         }
 
+        public static int GetLanguageID()
+        {
+            return LanguageID;
+        }
+
         public static string GetText(int textKey)
         {
             return LineText[LanguageID, textKey];
