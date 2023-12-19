@@ -117,10 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f6d850bb4b45b4f8c5ce704594c9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settings: {fileID: 11400000, guid: 9fafa74697254984d940ed47b820921b, type: 2}
   cameraTransform: {fileID: 3276046786942459438}
   body: {fileID: 3276046786928528945}
-  mouseSpeed: 100
+  mouseSpeed: 1000
   turnXLimiter: {x: -70, y: 70}
   CanRotate: 0
 --- !u!114 &3276046786928528956
@@ -173,7 +172,6 @@ MonoBehaviour:
   playerMover: {fileID: 3276046786928528956}
   speed: 0.2
   speedRotate: 300
-  settingData: {fileID: 11400000, guid: 9fafa74697254984d940ed47b820921b, type: 2}
 --- !u!1 &3276046786942459427
 GameObject:
   m_ObjectHideFlags: 0
